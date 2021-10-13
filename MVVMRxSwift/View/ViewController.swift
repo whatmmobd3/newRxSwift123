@@ -20,13 +20,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let service = RestaurantService()
-//        service.fetchRestaurants().subscribe(onNext: {
-//            restaurants in
-//            print(restaurants)
-//        }).disposed(by: disposeBag)
+        tableView.tableFooterView = UIView()
         
-        viewModel.fetchRestaurantViewModel().bind(to: tableView.rx.items(cellIdentifier: "cell"))
+        navigationItem.title = viewModel.title
+        navigationController?.navigationBar.prefersLargeTitles = true
+        tableView.contentInsetAdjustmentBehavior = .never
+        
+        
+        viewModel.fetchRestaurantViewModel().observeOn(MainScheduler.instance)
+        .bind(to: tableView.rx.items(cellIdentifier: "cell"))
         {index,viewModel, cell in cell.textLabel?.text = viewModel.displayText
             
         }.disposed(by: disposeBag)

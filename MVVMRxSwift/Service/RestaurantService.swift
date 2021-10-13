@@ -5,7 +5,7 @@ protocol RestaurantServiceProtocol {
     func fetchRestaurants() -> Observable<[Restaurant]> 
 }
 
-class RestaurantService{
+class RestaurantService: RestaurantServiceProtocol{
     func fetchRestaurants() -> Observable<[Restaurant]> {
         return Observable.create{ observer -> Disposable in
             

@@ -92,21 +92,69 @@
 		FB186B7B2716E583005B78F6 /* MVVMRxSwift */ = {
 			isa = PBXGroup;
 			children = (
-				FB186B7C2716E583005B78F6 /* AppDelegate.swift */,
-				FB186B7E2716E583005B78F6 /* SceneDelegate.swift */,
-				FB186B802716E583005B78F6 /* ViewController.swift */,
-				FB186B822716E583005B78F6 /* Main.storyboard */,
+				FBDAB22A2716FA8D00C12DA5 /* App */,
+				FBDAB2252716FA2D00C12DA5 /* Data */,
+				FBDAB2272716FA4000C12DA5 /* Service */,
+				FBDAB2262716FA3900C12DA5 /* Model */,
+				FBDAB2292716FA7800C12DA5 /* View */,
+				FBDAB2282716FA4600C12DA5 /* ViewModel */,
 				FB186B852716E585005B78F6 /* Assets.xcassets */,
 				FB186B872716E585005B78F6 /* LaunchScreen.storyboard */,
 				FB186B8A2716E585005B78F6 /* Info.plist */,
-				FBDAB2192716E67700C12DA5 /* AppCoordinator.swift */,
-				FBDAB21B2716E9BF00C12DA5 /* restaurants.json */,
-				FBDAB2212716EE1400C12DA5 /* RestaurantsListViewModel.swift */,
-				FBDAB2232716EF1600C12DA5 /* RestaurantViewModel.swift */,
-				FBDAB21D2716EA4C00C12DA5 /* Restaurant.swift */,
-				FBDAB21F2716EA8000C12DA5 /* RestaurantService.swift */,
 			);
 			path = MVVMRxSwift;
+			sourceTree = "<group>";
+		};
+		FBDAB2252716FA2D00C12DA5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FBDAB21B2716E9BF00C12DA5 /* restaurants.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FBDAB2262716FA3900C12DA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBDAB21D2716EA4C00C12DA5 /* Restaurant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBDAB2272716FA4000C12DA5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FBDAB21F2716EA8000C12DA5 /* RestaurantService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FBDAB2282716FA4600C12DA5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FBDAB2232716EF1600C12DA5 /* RestaurantViewModel.swift */,
+				FBDAB2212716EE1400C12DA5 /* RestaurantsListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FBDAB2292716FA7800C12DA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB186B802716E583005B78F6 /* ViewController.swift */,
+				FB186B822716E583005B78F6 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FBDAB22A2716FA8D00C12DA5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FBDAB2192716E67700C12DA5 /* AppCoordinator.swift */,
+				FB186B7C2716E583005B78F6 /* AppDelegate.swift */,
+				FB186B7E2716E583005B78F6 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

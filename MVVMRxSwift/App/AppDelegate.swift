@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  MVVMRxSwift
-//
-//  Created by Loc Nguyen on 13/10/2021.
-//
-
 import UIKit
 
 @main
