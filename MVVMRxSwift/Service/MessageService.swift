@@ -1,12 +1,12 @@
 import Foundation
 import RxSwift
 
-protocol RestaurantServiceProtocol {
-    func fetchRestaurants() -> Observable<[MessageModel]>
+protocol MessageServiceProtocol {
+    func fetchMessage() -> Observable<[MessageModel]>
 }
 
-class RestaurantService: RestaurantServiceProtocol{
-    func fetchRestaurants() -> Observable<[MessageModel]> {
+class MessageService: MessageServiceProtocol{
+    func fetchMessage() -> Observable<[MessageModel]> {
         return Observable.create{ observer -> Disposable in
             
             guard let path = Bundle.main.path(forResource: "messageList", ofType: "json") else{
@@ -17,8 +17,8 @@ class RestaurantService: RestaurantServiceProtocol{
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options:
                 .mappedIfSafe)
                 
-                let restaurants = try JSONDecoder().decode([MessageModel].self, from: data)
-                observer.onNext(restaurants)
+                let message = try JSONDecoder().decode([MessageModel].self, from: data)
+                observer.onNext(message)
             }catch{
                 observer.onError(error)
             }

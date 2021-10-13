@@ -4,7 +4,7 @@ struct MessageModel: Decodable, Identifiable{
     let id: Int
     let title: String
     let content: String
-//    let attchmentList: [Obj]
+    let attachmentList: [Obj]
     let totalComments: Int
 
 }

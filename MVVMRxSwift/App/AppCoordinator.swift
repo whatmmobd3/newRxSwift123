@@ -9,7 +9,7 @@ class AppCoordinator{
     }
     
     func start(){
-        let viewController = ViewController.instantiate(viewModel: RestaurantsListViewModel())
+        let viewController = ViewController.instantiate(viewModel: MessageListViewModel())
         
         let navigationController = UINavigationController(rootViewController: viewController)
         window.rootViewController  = viewController
