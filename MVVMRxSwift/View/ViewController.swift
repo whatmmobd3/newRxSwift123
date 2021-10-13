@@ -18,24 +18,33 @@ class ViewController: UIViewController {
         viewController.viewModel = viewModel
         return viewController
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        tableView.tableFooterView = UIView()
-//
-//        navigationItem.title = viewModel.title
-//        navigationController?.navigationBar.prefersLargeTitles = true
-//        tableView.contentInsetAdjustmentBehavior = .never
+//        print(navigationItem)
         
+        //        tableView.tableFooterView = UIView()
+        //
+        //        navigationItem.title = viewModel.title
+        //        navigationController?.navigationBar.prefersLargeTitles = true
+        //        tableView.contentInsetAdjustmentBehavior = .never
+        
+        
+        //        viewModel.fetchMessageViewModel().observeOn(MainScheduler.instance)
+        //        .bind(to: tableView.rx.items(cellIdentifier: "cell"))
+        //        {index,viewModel, cell in cell.textLabel?.text = viewModel.displayText
+        //        }.disposed(by: disposeBag)
         
         viewModel.fetchMessageViewModel().observeOn(MainScheduler.instance)
-        .bind(to: tableView.rx.items(cellIdentifier: "cell"))
-        {index,viewModel, cell in cell.textLabel?.text = viewModel.displayText
-            
+            .bind(to: tableView.rx.items(cellIdentifier: "cell"))
+        {index,viewModel,cell in cell.textLabel?.text = viewModel.displayText
         }.disposed(by: disposeBag)
+        
+  
+        
     }
-
-
+    
+    
 }
 

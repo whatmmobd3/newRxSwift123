@@ -5,8 +5,10 @@ struct MessageViewModel{
     private let message: MessageModel
     
     var displayText: String{
-        let id = String(message.content)
-        return id
+        
+//        print("*******",message)
+        
+        return message.title
     }
     
     init(message: MessageModel) {
@@ -14,3 +16,10 @@ struct MessageViewModel{
         
     }
 }
+
+
+//let id: Int
+//let title: String
+//let content: String
+//let attachmentList: [Obj]
+//let totalComments: Int

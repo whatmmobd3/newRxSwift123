@@ -14,4 +14,10 @@ final class MessageListViewModel{
         messageService.fetchMessage().map{ $0.map{
             MessageViewModel(message: $0) } }
     }
+    
+//    func fetchSeletedMessage() -> Observable<[MessageViewModel]>{
+//        messageService.fetchMessage().map{ $0.map{
+//            MessageViewModel(message: $0) } }
+//    }
+    
 }
