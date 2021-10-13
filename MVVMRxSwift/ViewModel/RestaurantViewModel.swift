@@ -2,13 +2,14 @@ import Foundation
 
 
 struct RestaurantViewModel{
-    private let restaurant: Restaurant
+    private let restaurant: MessageModel
     
     var displayText: String{
-        return restaurant.name + " - " + restaurant.place.capitalized
+        let id = String(restaurant.content)
+        return id
     }
     
-    init(restaurant: Restaurant) {
+    init(restaurant: MessageModel) {
         self.restaurant = restaurant
         
     }
