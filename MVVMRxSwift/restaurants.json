@@ -1,16 +1,16 @@
 [
     {
-        "name": "Chelsea",
-        "place":"london"
+        "name": "Real Madrid",
+        "place":"Madrid"
     },
     {
-        "name": "Man Utd",
-        "place":"manchester"
+        "name": "Bayer Munich",
+        "place":"Munich"
     },
 
     {
-        "name": "Barcelona",
-        "place":"Catalynia"
+        "name": "Inter Milan",
+        "place":"Milan"
     },
 
     

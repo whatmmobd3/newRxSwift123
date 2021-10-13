@@ -1,12 +1,9 @@
-//
-//  RestaurantService.swift
-//  MVVMRxSwift
-//
-//  Created by Loc Nguyen on 13/10/2021.
-//
-
 import Foundation
 import RxSwift
+
+protocol RestaurantServiceProtocol {
+    func fetchRestaurants() -> Observable<[Restaurant]> 
+}
 
 class RestaurantService{
     func fetchRestaurants() -> Observable<[Restaurant]> {
